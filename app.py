@@ -39,7 +39,7 @@ DEFAULT_MODEL = "black-forest-labs/FLUX.1-schnell"
 DEFAULT_WIDTH = 1024
 DEFAULT_HEIGHT = 768
 
-BASE_URL = os.environ.get("IMAGE_GENERATOR_URL", "http://image-generator:5000").rstrip("/")
+BASE_URL = os.environ.get("IMAGE_GENERATOR_URL", "http://python:5000").rstrip("/")
 IMAGES_DIR = os.path.join(os.path.dirname(__file__), "generated_images")
 os.makedirs(IMAGES_DIR, exist_ok=True)
 
@@ -47,7 +47,7 @@ os.makedirs(IMAGES_DIR, exist_ok=True)
 @app.route("/health", methods=["GET"])
 def health_check():
     """Health check endpoint"""
-    return jsonify({"status": "healthy", "service": "ai-image-generator"}), 200
+    return jsonify({"status": "healthy", "service": "ai-storybook-publisher-python"}), 200
 
 
 def save_generated_image(image: Image.Image, prompt: str) -> str:

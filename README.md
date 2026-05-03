@@ -16,7 +16,7 @@ Standalone Flask microservice that provides AI image generation capabilities usi
 | Variable | Required | Default | Description |
 |---|---|---|---|
 | `HF_TOKEN` | ✅ | None | Hugging Face API access token |
-| `IMAGE_GENERATOR_URL` | ❌ | `http://image-generator:5000` | Public base URL for image serving |
+| `IMAGE_GENERATOR_URL` | ❌ | `http://python:5000` | Public base URL for image serving |
 | `PORT` | ❌ | `5000` | Server port |
 | `DEBUG` | ❌ | `False` | Flask debug mode |
 
